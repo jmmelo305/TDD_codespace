@@ -1,14 +1,10 @@
-def take_damage(player, amount):
-    player ["health"] = max(0, player["health"] - amount)
-    if player["health"] == 0:
-        player ["alive"] == False
-    return player - amount
+def take_damage(health, amount):
+    return max(0, health - amount)
 
-def heal(player, amount):
-    return player + amount
 
-def is_alive(player):
-    if player > 0:
-        return True
-    else:
-        return False
+def heal(health, amount):
+    return health + amount
+
+
+def is_alive(health):
+    return health > 0
